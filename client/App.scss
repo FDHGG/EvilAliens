@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
+$navy: #001e38;
+$green: #15b78f;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: $navy;
+}
+
+div {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 5rem;
+    color: $green;
+  }
+}

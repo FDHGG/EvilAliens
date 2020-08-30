@@ -1,0 +1,42 @@
+{
+  "name": "EvilAliens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack --config webpack.client.prod.js && --webpack --mode=production --confg webpack.server.js",
+    "start": "NODE_ENV=production node ./dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@hot-loader/react-dom": "^16.13.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "fibers": "^5.0.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "react-hot-loader": "^4.12.21",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  }
+}
