@@ -1,5 +1,6 @@
 const path = require('path');
 const cwd = process.cwd();
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -19,8 +20,17 @@ module.exports = {
       {
         test: /\.scss/,
         exclude: /node_modules/,
-        use: ['style-loader','css-loader','sass-loader']
+        use: ['style-loader','css-loader',{
+          loader: 'sass-loader',
+          options: {
+            implementation: require('sass'),
+            sassOptions: {
+              fiber: require('fibers')
+            },
+          },
+        },]
       }
     ]
-  }
+  },
+
 }

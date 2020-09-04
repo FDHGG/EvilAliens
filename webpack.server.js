@@ -1,6 +1,7 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const cwd = process.cwd();
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -31,5 +32,6 @@ module.exports = {
       },
       { test: /\.(scss|css)$/, loader: "ignore-loader" }
     ]
-  }
+  },
+
 }
