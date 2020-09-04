@@ -13,14 +13,23 @@ module.exports = {
     publicPath: '/dist/',
     libraryTarget: 'commonjs2'
   },
-  externals: nodeExternals(),
+  externals: [
+    nodeExternals(),
+    {
+      react: 'react',
+      'react-dom': 'react-dom',
+      'react-router-dom': 'react-router-dom',
+      'react-router': 'react-router',
+    }
+  ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      }
+      },
+      { test: /\.(scss|css)$/, loader: "ignore-loader" }
     ]
   }
 }
